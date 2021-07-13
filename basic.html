@@ -1,0 +1,99 @@
+
+<?php require 'index1.php'?>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>control base</h1>
+<form action="index1.php"method="post">
+<center>
+  <tr>
+    <th>  </th>
+    <th>  </th> 
+    <th>  </th>
+    </tr>
+       <tr><td></td>
+<td><input type="submit"  name="forward" value = "forward" id="v1" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #F0F8FF; /*Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style>
+</td>
+       </tr>
+  <td>   </td>
+        </tr> </div>
+        <br>
+      <tr>
+<td><input type="submit" name="left" value="left"id="v2" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit"  name ="stop"value =" stop" id="v3"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit" name="right" value= "right"id="v4"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+</tr>  </div>
+        <br>
+        <tr>
+        <td></td>
+<td><input type="submit"  name ="backward"value= "backward"id="v5"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<input type="hidden" name="selected" value =""id ="v">
+  </td>
+       </tr>
+	   </center>
+  </form>
+	<br>
+<br><hr>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "3317b4eb-da97-498d-a71e-4d712ac1f8e2", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "156b7a0b-3956-4914-8a73-7ccc6641f431", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
+<script>
+function dir_insert(selected){
+document.getElementById("v").value = selected;
+}
+</script>

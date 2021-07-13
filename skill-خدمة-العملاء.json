@@ -1,0 +1,146 @@
+{
+  "intents": [
+    {
+      "intent": "استفسار",
+      "examples": [
+        {
+          "text": "بعد كم ستاك اكون اجتزت التدريب"
+        },
+        {
+          "text": "شهادة الفل ستاك غير عن شهادة التدريب"
+        },
+        {
+          "text": "كم رسوم الشهادة"
+        },
+        {
+          "text": "كيف اسجل معاكم"
+        },
+        {
+          "text": "كيف اغير اسمي بالموقع قبل اصدار الشهادة"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "الأساليب_الذكيه",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "أهلاً الاساليب الذكيه في خدمتك,  يمكنك التواصل عبر الأيميل "
+              },
+              {
+                "text": "اهلاً الاساليب الذكيه في خدمتك ,يمكنك التواصل عبر الواتساب"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "الأساليب_الذكيه",
+      "dialog_node": "node_10_1626138704627",
+      "previous_sibling": "node_2_1626141577267"
+    },
+    {
+      "type": "standard",
+      "title": "استفسار",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "أهلاً بك يمكننا خدمتك عبر البريد الألكتروني"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#استفسار",
+      "dialog_node": "node_2_1626141577267",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة"
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا فهم"
+              },
+              {
+                "text": "لم أفهم قصدك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_10_1626138704627",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "أهلا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "اهلاً  كيف يمكنني خدمتك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "خدمة العملاء",
+  "language": "ar",
+  "description": ""
+}
